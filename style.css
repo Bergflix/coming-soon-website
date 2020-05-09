@@ -1,0 +1,36 @@
+body {
+    overflow: hidden;
+}
+body, body video {
+    top: 50%;
+    left: 50%;
+}
+body video {
+    position: fixed;
+    min-height: 100%;
+    min-width: 120%;
+    z-index: -100;
+    transform: translate(-50%, -50%);
+}
+
+body div {
+    z-index: 1000;
+    position: absolute;
+}
+body div#img-1 {
+    bottom: 0;
+    right: 0;
+}
+body div#img-2 {
+    bottom: 100px;
+    right: -5px;
+}
+
+body div a {
+    text-decoration: none;
+    color: white;
+    z-index: 1000;
+}
+body div a img {
+    width: 300px;
+}
