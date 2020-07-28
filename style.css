@@ -1,11 +1,58 @@
+@import "fonts/fonts.css";
+
 root, * {
     background-color: #151515;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: "Gellix Bold", sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
 }
+
+span.red {
+    font-size: inherit;
+}
+.red {
+    color: #f40f3a;
+}
+.title {
+    font-size: 2rem;
+    color: white;
+}
+.subtitle {
+    font-size: 1rem;
+    color: #888;
+}
+::placeholder {
+    color: #838383;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #838383;
+}
+
+::-ms-input-placeholder {
+    color: #838383;
+}
+
+.input, .button {
+    color: white;
+    background: #1C1C1C;
+    border-radius: 6px;
+    border: none;
+    box-shadow: none;
+    padding: .5rem;
+}
+
+svg {
+    background: transparent;
+}
+svg * {
+    fill: white;
+    stroke: transparent;
+}
+
 
 #background {
     position: absolute;
@@ -13,7 +60,7 @@ root, * {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("https://share.bergflix.de/imgs/bergi.png");
+    background-image: url("https://share.bergflix.de/imgs/bergi_sad.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -28,15 +75,103 @@ root, * {
     height: 100%;
 }
 
+@media only screen and (max-width: 1200px) {
+    #sidebar {
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 660px) {
+    #sidebar {
+        width: 100%;
+    }
+}
+
 #sidebar .header {
     height: 10%;
+    padding: 1rem 1.5rem;
 }
 
 #sidebar .center {
     height: 80%;
-    vertical-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+#sidebar .center > * {
+    margin: 0 1.5rem;
+}
+#newsletter > * {
+    float: left;
+    margin-top: .5rem;
+}
+#newsletter .input {
+
+}
+#newsletter .button {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-left: .5rem;
 }
 
 #sidebar .footer {
     height: 10%;
+    padding-bottom: 1.5rem;
+}
+#sidebar .footer > * {
+    margin: 0 1.5rem;
+}
+#sidebar .footer .subtitle {
+    margin-bottom: .5rem;
+}
+#service-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    height: 3rem;
+}
+#service-list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+#discord {
+    width: 8rem;
+    background: #7289DA;
+    padding: 0 .5rem;
+}
+#patreon {
+    width: 10.3rem;
+    background: #E85B46;
+}
+#discord img, #patreon img {
+    max-width: 90%;
+}
+#twitter, #spreadshirt {
+    width: 3rem;
+}
+#twitter a, #spreadshirt a {
+    height: 3rem;
+}
+#twitter img, #spreadshirt img {
+    max-width: 100%;
+}
+#service-list li a {
+    background: transparent;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+#service-list li a:hover {
+    cursor: pointer;
+}
+#service-list li a img {
+    background: transparent;
+    border-radius: 6px;
 }
