@@ -200,3 +200,35 @@ svg * {
 #infobar ul li a {
     text-decoration: none;
 }
+
+#overlay {
+    display: none;
+    background: #1C1C1C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+}
+#overlay .close {
+    float: right;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    margin: 1.5rem;
+}
+#overlay .close svg {
+    width: 100%;
+    height: 100%;
+}
+#overlay .close svg * {
+    stroke: white;
+}
+#overlay .title {
+    margin: 1.5rem;
+}
+#overlay .body {
+    margin: 1.5rem;
+    font-family: "Gellix Regular", sans-serif;
+    max-width: 90%;
+}
