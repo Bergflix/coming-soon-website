@@ -232,3 +232,6 @@ svg * {
     font-family: "Gellix Regular", sans-serif;
     max-width: 90%;
 }
+#overlay .body * {
+    font-family: "Gellix Regular", sans-serif;
+}
