@@ -75,12 +75,12 @@ svg * {
     height: 100%;
 }
 
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
     #sidebar {
         width: 50%;
     }
 }
-@media only screen and (max-width: 660px) {
+@media (max-width: 660px) {
     #sidebar {
         width: 100%;
     }
