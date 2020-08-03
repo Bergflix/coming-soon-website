@@ -82,7 +82,7 @@ svg * {
 }
 @media (max-width: 660px) {
     #sidebar {
-        width: 100%;
+        width: 100% !important;
     }
 }
 
