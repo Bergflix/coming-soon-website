@@ -75,17 +75,6 @@ svg * {
     height: 100%;
 }
 
-@media (min-width: 660px) {
-    #sidebar {
-        width: 50%;
-    }
-}
-@media (min-width: 1200px) {
-    #sidebar {
-        width: 25%;
-    }
-}
-
 #sidebar .header {
     height: 10%;
     padding: 1rem 1.5rem;
@@ -178,6 +167,7 @@ svg * {
 }
 
 #infobar {
+    display: none;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -234,4 +224,20 @@ svg * {
 }
 #overlay .body * {
     font-family: "Gellix Regular", sans-serif;
+}
+
+
+
+@media (min-width: 660px) {
+    #sidebar {
+        width: 50%;
+    }
+    #infobar {
+        display: initial;
+    }
+}
+@media (min-width: 1200px) {
+    #sidebar {
+        width: 25%;
+    }
 }
