@@ -226,9 +226,7 @@ svg * {
     font-family: "Gellix Regular", sans-serif;
 }
 
-
-
-@media (min-width: 660px) {
+@media (min-width: 750px) {
     #sidebar {
         width: 50%;
     }
