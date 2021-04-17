@@ -1,0 +1,38 @@
+/// DESKTOP ///
+
+// header
+$header-h: 3rem;
+$header-padding-h: 2rem;
+$header-total-h: calc(#{$header-h} + 2 * #{$header-padding-h});
+
+$header-padding-w: 6rem;
+
+// footer
+$footer-h: 5rem;
+$footer-padding-h: 2rem;
+$footer-padding-w: 6rem;
+
+// page
+// hier ist die Kopfzeile 2rem höher und die Fußzeile verschwindet
+$page-padding-w: 6rem;
+$page-margin-bottom: 10rem;
+$page-fullscreen-h: calc(100vh - #{$header-h} - 2 * #{$header-padding-h});
+$page-fullscreen-w: calc(100vw - 2 * #{$page-padding-w});
+
+/// MOBILE ///
+
+// m-header
+$m-header-h: 3rem;
+$m-header-padding-h: 1rem;
+$m-header-total-h: calc(#{$m-header-h} + 2 * #{$m-header-padding-h});
+
+$m-header-padding-w: 2rem;
+
+// page
+// padding-top: wird aus der Höhe der Kopfzeile (hier 5rem) und den zusätzlichen 2rem Platz berechnet
+$m-page-padding-top: 0rem;
+// padding-bottom: wird aus der Höhe der Fußleiste (hier 3.5rem) und den zusätzlichen 2rem Platz berechnet
+$m-page-padding-bottom: 0rem;
+$m-page-padding-w: 2rem;
+$m-page-fullscreen-h: 0rem;
+$m-page-fullscreen-w: 0rem;

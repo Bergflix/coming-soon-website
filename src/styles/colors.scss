@@ -1,0 +1,23 @@
+// primary
+$primary: #f40f3a;
+$primary-alpha: rgba($primary, 0.8);
+
+// text
+$text-primary: #fff;
+$text-secondary: #989898;
+$text-light: darken($text-primary, 25);
+
+// navigation
+$nav-secondary: #aaa;
+
+// background
+$background-light: #6b6b6b;
+$background: #111111;
+$background-dark: #000000;
+
+// scrollbar
+$scrollbar-foreground: $background;
+$scrollbar-background: $background-dark;
+
+// icon
+$icon-primary: #fff;

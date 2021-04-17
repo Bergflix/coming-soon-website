@@ -1,0 +1,193 @@
+@import './styles/colors.scss';
+@import './styles/proportions.scss';
+
+:root {
+  font-family: 'Gellix', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+html,
+body,
+#root,
+#container {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  color: $text-primary;
+  overflow: hidden auto;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: $background-dark;
+}
+
+*::selection {
+  background: $primary;
+  color: $text-primary;
+}
+
+*::-moz-selection {
+  background: $primary;
+  color: $text-primary;
+}
+
+a {
+  text-decoration: none;
+  color: $text-primary;
+}
+a:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Some global classes
+.t-grey {
+  color: $text-secondary;
+}
+
+.t-red {
+  color: $primary;
+}
+
+.t-white {
+  color: $text-primary;
+}
+
+.title-container {
+  height: calc(100vh - 2 * #{$header-total-h});
+  width: $page-fullscreen-w;
+  margin-bottom: $header-total-h;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .subtitle {
+    font-size: 38px;
+    font-weight: 600;
+    color: $text-secondary;
+  }
+
+  .title {
+    display: inline-flex;
+
+    margin-top: -25px;
+    margin-left: -5px;
+    font-size: 150px;
+    font-weight: bold;
+
+    .dot {
+      margin-right: 2rem;
+    }
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+
+  font-weight: bold;
+
+  margin-top: 3rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  .s-title-container {
+    display: flex;
+    flex-direction: column;
+
+    .subtitle {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .title {
+      margin-top: -5px;
+
+      font-size: 45px;
+      font-weight: bold;
+    }
+  }
+
+  .text {
+    margin-top: 30px;
+    margin-left: 100px;
+
+    width: calc(#{$page-fullscreen-w} / 2 - 4rem);
+
+    font-size: 20px;
+    font-weight: 600;
+
+    .t-red {
+      font-weight: bold;
+    }
+
+    .paragraph {
+      color: $text-secondary;
+      margin-top: 50px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// simple enter transition
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+  z-index: 1;
+}
+
+.fade-appear-active,
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms linear 150ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+
+// Custom Scrollbar
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $scrollbar-foreground $scrollbar-background;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: thin;
+}
+
+*::-webkit-scrollbar-track {
+  background: $scrollbar-background;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $scrollbar-foreground;
+  border-radius: 20px;
+  border: 3px solid $scrollbar-background;
+}

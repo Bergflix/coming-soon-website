@@ -1,0 +1,89 @@
+@import '../../styles/colors';
+@import '../../styles/screensize';
+@import '../../styles/proportions';
+
+#about-container {
+  .info {
+    display: grid;
+    grid-template-columns: auto 40rem;
+    place-items: start start;
+
+    .section {
+      grid-column: 1;
+    }
+
+    .picture-container {
+      display: grid;
+      place-items: center start;
+      height: 100%;
+      width: 100%;
+
+      grid-column: 2;
+
+      .picture {
+        position: relative;
+
+        .pic {
+          z-index: 1;
+        }
+
+        .text {
+          z-index: 2;
+        }
+      }
+
+      &.tim {
+        grid-row: 1;
+
+        .picture {
+          .pic {
+            border-radius: 4px;
+            width: 250px;
+
+            transition: transform 0.2s ease-out;
+
+            &:hover {
+              cursor: pointer;
+              transition: transform 0.5s ease;
+              transform: scale(1.05);
+            }
+          }
+
+          .text {
+            position: absolute;
+            top: 25px;
+            left: 11rem;
+            width: 330px;
+          }
+        }
+      }
+
+      &.discord {
+        grid-row: 2;
+
+        .picture {
+          place-self: end center;
+
+          .pic {
+            width: 400px;
+
+            transition: transform 0.2s ease-out;
+
+            &:hover {
+              cursor: pointer;
+              transition: transform 0.5s ease;
+              transform: scale(1.05);
+            }
+          }
+
+          .text {
+            position: absolute;
+            top: -5.6rem;
+            left: 4em;
+            width: 400px;
+          }
+        }
+      }
+    }
+  }
+}
