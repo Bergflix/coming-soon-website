@@ -14,21 +14,13 @@
 	@import '../styles/proportions.scss';
 
 	:global {
+		@import '../styles/classes.scss';
+
 		:root {
 			font-family: 'Gellix', 'Helvetica Neue', sans-serif;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
 			font-size: 16px;
-		}
-
-		*::selection {
-			background: $primary;
-			color: $text-primary;
-		}
-
-		*::-moz-selection {
-			background: $primary;
-			color: $text-primary;
 		}
 
 		html,
@@ -47,6 +39,16 @@
 			overflow: hidden scroll;
 		}
 
+		section {
+			height: 100vh;
+			width: calc(100vw - 2 * #{$page-border});
+
+			&:first-child {
+				height: calc(100vh - 2 * #{$header-total-h});
+				padding-bottom: $header-total-h;
+			}
+		}
+
 		a {
 			text-decoration: none;
 			color: $text-primary;
@@ -56,98 +58,15 @@
 			cursor: pointer;
 		}
 
-		// Global classes
-		.t-grey {
-			color: $text-secondary;
-		}
-
-		.t-red {
-			color: $primary;
-		}
-
-		.t-white {
+		// Custom selection
+		*::selection {
+			background: $primary;
 			color: $text-primary;
 		}
 
-		.title-container {
-			height: calc(100vh - 2 * #{$header-total-h});
-			margin-bottom: $header-total-h;
-
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-
-			.subtitle {
-				font-size: 38px;
-				font-weight: 600;
-				color: $text-secondary;
-			}
-
-			.title {
-				display: inline-flex;
-
-				margin-top: -25px;
-				margin-left: -5px;
-				font-size: 150px;
-				font-weight: bold;
-
-				.dot {
-					margin-right: 2rem;
-				}
-			}
-		}
-
-		.section {
-			display: flex;
-			flex-direction: column;
-
-			font-weight: bold;
-
-			margin-top: 3rem;
-
-			&:first-child {
-				margin-top: 0;
-			}
-
-			.s-title-container {
-				display: flex;
-				flex-direction: column;
-
-				.subtitle {
-					font-size: 28px;
-					font-weight: bold;
-				}
-
-				.title {
-					margin-top: -5px;
-
-					font-size: 45px;
-					font-weight: bold;
-				}
-			}
-
-			.text {
-				margin-top: 30px;
-				margin-left: 100px;
-
-				width: calc(100vw / 2 - 4rem);
-
-				font-size: 20px;
-				font-weight: 600;
-
-				.t-red {
-					font-weight: bold;
-				}
-
-				.paragraph {
-					color: $text-secondary;
-					margin-top: 50px;
-
-					&:first-child {
-						margin-top: 0;
-					}
-				}
-			}
+		*::-moz-selection {
+			background: $primary;
+			color: $text-primary;
 		}
 
 		// Custom scrollbar

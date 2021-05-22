@@ -6,78 +6,78 @@
 	import DiscordText from '../resources/discord-t.png';
 </script>
 
-<div class={'title-container'}>
-	<span class={'subtitle t-grey'}>Die "FTF"-Redaktion präsentiert</span>
-	<div class={'title t-white'}>
-		<span class={'t-white'}>Bergflix</span>
-		<span class={'dot t-red'}>.</span>
-		<TypeWriter class={'t-red'} words={['Originals', 'Movies', 'Series', 'Partymode']} />
+<section class="title-container">
+	<span class="subtitle t-grey">Die "FTF"-Redaktion präsentiert</span>
+	<div class="title t-white">
+		<span class="t-white">Bergflix</span>
+		<span class="t-red">.</span>
+		<TypeWriter class="t-red" words={['Originals', 'Movies', 'Series', 'Partymode']} />
 	</div>
-</div>
-<div class={'info'}>
-	<div class={'section'}>
-		<div class={'s-title-container'}>
-			<span class={'subtitle t-white'}>Unsere Mission?</span>
-			<span class={'title t-red'}>Eine On-Demand Plattform.</span>
+</section>
+<section class="info">
+	<div class="part">
+		<div class="s-title-container">
+			<span class="subtitle t-white">Unsere Mission?</span>
+			<span class="title t-red">Eine On-Demand Plattform.</span>
 		</div>
-		<div class={'text'}>
-			<div class={'paragraph'}>
+		<div class="text">
+			<div class="paragraph">
 				Bergflix ist eine Plattform, gegründet aus dem Kerngedanke eine eigene On-Demand
 				Streamingplattform für Kurzfilme und Serien des in die jahregekommenden YouTube Kinderstars <span
-					class={'t-red'}>”</span
+					class="t-red">”</span
 				>
-				<span class={'t-white'}>Herr Bergmann</span>
-				<span class={'t-red'}>”</span> zu erschaffen.
+				<span class="t-white">Herr Bergmann</span>
+				<span class="t-red">”</span> zu erschaffen.
 			</div>
-			<div class={'paragraph'}>
+			<div class="paragraph">
 				Unser Dev-Team fand seinem Ursprung im November 2019.
 				<div>
-					<span class={'t-red'}> ”</span>
-					<span class={'t-white'}>
+					<span class="t-red"> ”</span>
+					<span class="t-white">
 						Stellt euch mal Bergflix als wirklich richtige Streamingplattform vor...
 					</span>
-					<span class={'t-red'}>” </span>
+					<span class="t-red">” </span>
 				</div>
 				Joar, und seitdem arbeiten wir mal mehr mal weniger an dieser Plattform.
 			</div>
 		</div>
 	</div>
-	<div class={'section'}>
-		<div class={'s-title-container'}>
-			<span class={'subtitle t-white'}>Wann ist Bergflix fertig?</span>
-			<span class={'title t-red'}>Wenn wir ehrlich sind, wir haben selbst keinen Plan.</span>
+	<div class="part">
+		<div class="s-title-container">
+			<span class="subtitle t-white">Wann ist Bergflix fertig?</span>
+			<span class="title t-red">Wenn wir ehrlich sind, wir haben selbst keinen Plan.</span>
 		</div>
-		<div class={'text'}>
-			<div class={'paragraph'}>
+		<div class="text">
+			<div class="paragraph">
 				Die Entwicklung von Bergflix dauert wesentlich länger als angenommen. Im Gegensatz zu vielen
-				anderen Communityprojekten der “FTF”-Redaktion ist unsere komplette Webseite eine{' '}
-				<span class={'t-red'}>”</span>
-				<span class={'t-white'}>In-House Produktion</span>
-				<span class={'t-red'}>”</span>.
+				anderen Communityprojekten der “FTF”-Redaktion ist unsere komplette Webseite eine" "
+				<span class="t-red">”</span>
+				<span class="t-white">In-House Produktion</span>
+				<span class="t-red">”</span>.
 			</div>
-			<div class={'paragraph'}>
+			<div class="paragraph">
 				Wir werden uns für die Entwicklung von Bergflix so viel Zeit lassen wie wir benötigen, um
 				unsere eigenen Anspruche an die Plattform umsetzten zu können.
 			</div>
 		</div>
 	</div>
-	<div class={'picture-container tim'}>
-		<span class={'picture '}>
+	<div class="picture-container tim">
+		<span class="picture ">
 			<a href="https://www.youtube.com/HerrBergmann" target="_blank">
-				<img class={'pic'} src={BergiPic} alt={'TimPic'} />
+				<img class="pic" src={BergiPic} alt="TimPic" />
 			</a>
-			<img class={'text'} src={BergiText} alt={'TimText'} />
+			<img class="text" src={BergiText} alt="TimText" />
 		</span>
 	</div>
-	<div class={'picture-container discord'}>
-		<span class={'picture'}>
-			<img class={'text'} src={DiscordText} alt={'DiscordText'} />
+	<div class="picture-container discord">
+		<span class="picture">
+			<img class="text" src={DiscordText} alt="DiscordText" />
 			<a href="https://discord.gg/9SumTae" target="_blank">
-				<img class={'pic'} src={DiscordPic} alt={'DiscordPic'} />
+				<img class="pic" src={DiscordPic} alt="DiscordPic" />
 			</a>
 		</span>
 	</div>
-</div>
+</section>
 
 <style lang="scss">
 	@import '../styles/colors.scss';
@@ -87,6 +87,8 @@
 		display: grid;
 		grid-template-columns: auto 40rem;
 		place-items: start start;
+
+		height: 100%;
 
 		.section {
 			grid-column: 1;

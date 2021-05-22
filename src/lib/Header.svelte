@@ -18,7 +18,7 @@
 		},
 		{
 			title: 'Entwicklungsversion',
-			href: '/dev'
+			href: 'https://dev.bergflix.de/'
 		}
 	];
 
