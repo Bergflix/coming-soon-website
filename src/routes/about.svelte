@@ -8,9 +8,9 @@
 
 <section class="title-container">
 	<span class="subtitle t-grey">Die "FTF"-Redaktion präsentiert</span>
-	<div class="title t-white">
+	<div class="title">
 		<span class="t-white">Bergflix</span>
-		<span class="t-red">.</span>
+		<span class="dot t-red">.</span>
 		<TypeWriter class="t-red" words={['Originals', 'Movies', 'Series', 'Partymode']} />
 	</div>
 </section>
@@ -82,6 +82,10 @@
 <style lang="scss">
 	@import '../styles/colors.scss';
 	@import '../styles/proportions.scss';
+
+	.dot {
+		margin-right: 1rem;
+	}
 
 	.info {
 		display: grid;
