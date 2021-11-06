@@ -1,5 +1,4 @@
 @import "fonts/fonts.css";
-
 root, * {
     color: white;
     font-family: "Gellix Bold", sans-serif;
@@ -11,17 +10,22 @@ root, * {
 span.red {
     font-size: inherit;
 }
+
 .red {
     color: #f40f3a;
 }
+
 .title {
     font-size: 2rem;
     color: white;
+    margin-bottom: 2rem !important;
 }
+
 .subtitle {
     font-size: 1rem;
     color: #888;
 }
+
 ::placeholder {
     color: #838383;
     opacity: 1;
@@ -47,11 +51,11 @@ span.red {
 svg {
     background: transparent;
 }
+
 svg * {
     fill: white;
     stroke: transparent;
 }
-
 
 #background {
     position: absolute;
@@ -87,16 +91,18 @@ svg * {
     flex-direction: column;
     justify-content: center;
 }
-#sidebar .center > * {
+
+#sidebar .center>* {
     margin: 0 1.5rem;
 }
-#newsletter > * {
+
+#newsletter>* {
     float: left;
     margin-top: .5rem;
 }
-#newsletter .input {
 
-}
+#newsletter .input {}
+
 #newsletter .button {
     width: 2.25rem;
     height: 2.25rem;
@@ -107,12 +113,15 @@ svg * {
     height: 10%;
     margin-bottom: 1.5rem;
 }
-#sidebar .footer > * {
+
+#sidebar .footer>* {
     margin: 0 1.5rem;
 }
+
 #sidebar .footer .subtitle {
     margin-bottom: .5rem;
 }
+
 #service-list {
     list-style-type: none;
     overflow: hidden;
@@ -121,6 +130,7 @@ svg * {
     align-content: center;
     justify-content: center;
 }
+
 #service-list li {
     display: flex;
     flex-wrap: wrap;
@@ -130,37 +140,46 @@ svg * {
     height: 3rem;
     margin: 0 .5rem;
 }
+
 #discord {
     width: 8rem;
     background: #7289DA;
     padding: 0 .5rem;
 }
+
 #patreon {
     width: 10.3rem;
     background: #E85B46;
 }
+
 #discord img, #patreon img {
     max-width: 90%;
 }
+
 #twitter, #spreadshirt {
     width: 3rem;
 }
+
 #twitter a, #spreadshirt a {
     height: 3rem;
     width: 3rem;
 }
+
 #twitter img, #spreadshirt img {
     max-width: 100%;
 }
+
 #service-list li a {
     background: transparent;
     color: white;
     text-align: center;
     text-decoration: none;
 }
+
 #service-list li a:hover {
     cursor: pointer;
 }
+
 #service-list li a img {
     background: transparent;
     border-radius: 6px;
@@ -200,6 +219,7 @@ svg * {
     width: 100%;
     min-height: 100%;
 }
+
 #overlay .close {
     float: right;
     width: 3rem;
@@ -207,21 +227,26 @@ svg * {
     cursor: pointer;
     margin: 1.5rem;
 }
+
 #overlay .close svg {
     width: 100%;
     height: 100%;
 }
+
 #overlay .close svg * {
     stroke: white;
 }
+
 #overlay .title {
     margin: 1.5rem;
 }
+
 #overlay .body {
     margin: 1.5rem;
     font-family: "Gellix Regular", sans-serif;
     max-width: 90%;
 }
+
 #overlay .body * {
     font-family: "Gellix Regular", sans-serif;
 }
@@ -234,6 +259,7 @@ svg * {
         display: initial;
     }
 }
+
 @media (min-width: 1200px) {
     #sidebar {
         width: 25%;
