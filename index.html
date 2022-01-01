@@ -7,22 +7,64 @@
     <title>Bergflix.de - Coming Soon</title>
     <link rel="icon" href="https://cdn.bergflix.de/logo/light_bg.ico">
     <link rel="stylesheet" type="text/css" href="/style.css">
-
-    <!-- Matomo -->
-    <script type="text/javascript">
-        var _paq = window._paq = window._paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function () {
-            var u = "//matomo.bergflix.de/";
-            _paq.push(['setTrackerUrl', u + 'matomo.php']);
-            _paq.push(['setSiteId', '1']);
-            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-            g.type = 'text/javascript'; g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
-        })();
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        fetch('https://api.bergflix.de/api/coming-soon').then((data) => data.json())
+        .then((data) => {
+            const title = data.data.attributes.Title;
+            const md = data.data.attributes.Text;
+            // replace the text in the element with id="title" with the title. Use JQuery
+            $('#title').text(title);
+            // make a post request to the github markdown api and replace the text in the element with id="md" with the markdown. Use the standart fetch api
+            fetch('https://api.github.com/markdown', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/vnd.github.v3+json'
+                },
+                body: JSON.stringify({
+                    text: md,
+                    mode: 'markdown'
+                })
+            }).then((data) => data.text())
+            .then((data) => {
+                $('#md').html(data);
+            });
+        })
     </script>
-    <!-- End Matomo Code -->
+    <style>
+        /* Create a simple spinner */
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 3px solid #3498db;
+            width: 30px !important;
+            height: 45px !important;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -32,19 +74,10 @@
             <h1 class="title">Bergflix<span class="red">.</span></h1>
         </div>
         <div class="center">
-            <h3 class="title">Die entwicklung von Bergflix wurde am 28. Juli 2021 eingestellt.</h3>
-            <p>
-                Für mehr informationen, schaut gerne auf <a href="https://twitter.com/bergflixtogo" target="_blank"
-                    rel="noopener noreferrer">Twitter</a>
-                oder <a href="https://discord.gg/JP9UKrW" target="_blank" rel="noopener noreferrer">Discord</a> nach,
-                dort gibt es ein längeres statement.
-                <br><br>
-                Das Projekt wird auf GitHub als open-source-projekt bleiben, verwendet den code gerne
-                für eure eigenen projekte weiter.
-                <br><br>
-                Danke für alles ♥️ <br>
-                ~ Bergflix
-            </p>
+            <h3 class="title" id="title">Loading...</h3>
+            <p id="md">
+                Loading... 
+            </p>                
         </div>
         <div class="footer">
             <h3 class="subtitle">Siehe auch:</h3>
@@ -86,7 +119,7 @@
             </svg>
         </div>
         <div class="content">
-            <h3 class="title">Title</h3>
+            <h3 class="title"></h3>
             <div class="body">
                 Body
             </div>
